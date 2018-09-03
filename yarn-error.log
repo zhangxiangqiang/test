@@ -1,0 +1,32 @@
+Arguments: 
+  E:\Program Files\nodejs\node.exe E:\Program Files\nodejs\node_global\node_modules\yarn\bin\yarn.js start
+
+PATH: 
+  C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;E:\Program Files\nodejs\;E:\Program Files\Git\cmd;C:\Users\q977821807\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\q977821807\AppData\Local\Programs\Python\Python37\;C:\Users\q977821807\AppData\Local\Microsoft\WindowsApps;E:\Program Files\nodejs\node_global;
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  8.11.1
+
+Platform: 
+  win32 x64
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: Couldn't find a package.json file in "E:\\gradution2"
+      at new MessageError (E:\Program Files\nodejs\node_global\node_modules\yarn\lib\cli.js:186:110)
+      at E:\Program Files\nodejs\node_global\node_modules\yarn\lib\cli.js:40048:15
+      at Generator.next (<anonymous>)
+      at step (E:\Program Files\nodejs\node_global\node_modules\yarn\lib\cli.js:98:30)
+      at E:\Program Files\nodejs\node_global\node_modules\yarn\lib\cli.js:109:13
+      at <anonymous>

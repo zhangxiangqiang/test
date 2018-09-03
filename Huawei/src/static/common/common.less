@@ -1,0 +1,220 @@
+//@import "~antd/dist/antd.css";
+//
+///*NAV-BOTTOM*/
+//html{
+//  font-size: 100px; /*750:1REM=100PX*/
+//}
+//
+//#root {
+//  margin: 0 auto;
+//  max-width: 750px;
+//}
+//
+//p{
+//  margin-bottom: 0;
+//}
+//
+//.footerNavBox {
+//  position: fixed;
+//  left: 0;
+//  right: 0;
+//  bottom: 0;
+//  z-index: 9999;
+//  max-width: 750px;
+//  height: 1.06rem;
+//  line-height: 1.06rem;
+//  //border-top: .02rem solid #D5D5D5;
+//  background: #FFF;
+//
+//  display: flex;
+//  a {
+//    flex: 1;
+//    text-align: center;
+//    color: #000;
+//
+//    i {
+//      display: block;
+//      margin-top: .12rem;
+//      font-size: .4rem;
+//
+//    }
+//
+//    span {
+//      display: block;
+//      height: .5rem;
+//      line-height: .5rem;
+//      font-size: .32rem;
+//    }
+//
+//    &.active {
+//      color: #9D0800;
+//      font-weight: bold;
+//    }
+//  }
+//}
+//
+//.searchBox {
+//
+//    .search {
+//        display: flex;
+//        flex: 3;
+//        width: 7.5rem;
+//        padding: .2rem .1rem 0 .1rem;
+//        font-size: .4rem;
+//        position: fixed;
+//        top: 0;
+//        left: 0;
+//      background-color: #1e1e1e;
+//
+//        input {
+//        border-radius: 0.5rem;
+//        border: none;
+//
+//        width: 5.5rem;
+//        height: .6rem;
+//        background-color: rgba(255,255,255,0.5);
+//        font-size: .15rem;
+//        text-align: center;
+//      }
+//
+//        i{
+//          color: white;
+//        }
+//        span {
+//          flex: 1;
+//          text-align: center;
+//          font-size: .35rem;
+//          color: #FFF;
+//          margin-top: .1rem;
+//          margin-left: 0.28rem;
+//          line-height: 0.6rem;
+//
+//        }
+//
+//        .searchIcon {
+//          position: absolute;
+//          top: .3rem;
+//          left: .25rem;
+//        }
+//
+//        .bell {
+//          margin-left: .28rem;
+//          margin-top: .1rem;
+//        }
+//        .login{
+//
+//        }
+//
+//      }
+//}
+@import "~antd/dist/antd.css";
+
+/*NAV-BOTTOM*/
+html {
+  font-size: 100px; /*750:1REM=100PX*/
+}
+
+#root {
+  margin: 0 auto;
+  max-width: 750px;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.footerNavBox {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  max-width: 750px;
+  height: 1.1rem;
+  margin: 0 auto;
+  background: #FFF;
+
+  display: flex;
+  a {
+    display: block;
+    flex: 1;
+    text-align: center;
+    color: #000;
+    font-size: .32rem;
+
+    i {
+      line-height: .55rem;
+      font-size: .4rem;
+    }
+
+    p {
+      line-height: .55rem;
+    }
+
+    .ant-badge {
+      p {
+        line-height: 20px;
+      }
+    }
+
+    &.active {
+      color: #9D0800;
+    }
+  }
+}
+
+.searchBox {
+
+
+  .search {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    margin:0 auto;
+    display: flex;
+    flex: 3;
+    width: 7.5rem;
+    padding: .1rem .1rem .1rem .2rem;
+    font-size: .4rem;
+
+    background-color: rgba(0, 0, 0, 0.1);
+
+    input {
+      border-radius: 0.5rem;
+      border: none;
+
+      width: 5.5rem;
+      height: .6rem;
+      background-color: rgba(255, 255, 255, 0.5);
+      font-size: .15rem;
+      text-align: center;
+    }
+
+    i {
+      color: white;
+    }
+    span {
+      flex: 1;
+      text-align: center;
+      font-size: .35rem;
+      color: #FFF;
+      margin-top: .1rem;
+    }
+
+    .searchIcon {
+      position: absolute;
+      top: .2rem;
+      left: .3rem;
+    }
+
+    .bell {
+      margin-left: .5rem;
+      margin-top: .1rem;
+    }
+    .login {
+
+    }
+
+  }
+}

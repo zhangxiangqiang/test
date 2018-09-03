@@ -1,0 +1,337 @@
+<!DOCTYPE html><html><head><title>华为商城APP–API接口文档</title><meta charset='utf-8'><link href='https://dn-maxiang.qbox.me/res-min/themes/marxico.css' rel='stylesheet'><style>
+.note-content  {font-family: 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei', 'WenQuanYi Micro Hei', SimSun, Song, sans-serif;}
+
+</style></head><body><div id='preview-contents' class='note-content'>
+                        
+                    
+
+
+
+<h1 id="华为商城appapi接口文档">华为商城APP–API接口文档</h1>
+
+
+
+<h2 id="个人中心">[ 个人中心 ]</h2>
+
+
+
+<h3 id="用户登录接口-验证是否登录">用户登录接口 &amp;&amp; 验证是否登录</h3>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs stylus"><div class="hljs-line">地址：/personal/login
+</div><div class="hljs-line">方式：POST
+</div><div class="hljs-line">参数：name=xxx&amp;password=xxx
+</div><div class="hljs-line">返回：{
+</div><div class="hljs-line">   <span class="hljs-selector-tag">code</span>:<span class="hljs-number">0</span>,  <span class="hljs-comment">//=&gt;0 登录成功   1 登录失败</span>
+</div><div class="hljs-line">   msg:<span class="hljs-string">'xxx'</span>
+</div><div class="hljs-line">}
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">方式：GET
+</div><div class="hljs-line">参数：--
+</div><div class="hljs-line">返回：{
+</div><div class="hljs-line">   <span class="hljs-selector-tag">code</span>:<span class="hljs-number">0</span>,  <span class="hljs-comment">//=&gt;0 已登录   1 未登录</span>
+</div><div class="hljs-line">   msg:<span class="hljs-string">'xxx'</span>
+</div><div class="hljs-line">}
+</div><div class="hljs-line"><wbr>
+</div></code></pre>
+
+
+
+<h3 id="用户注册接口">用户注册接口</h3>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs stylus"><div class="hljs-line">地址：/personal/register
+</div><div class="hljs-line">方式：POST
+</div><div class="hljs-line">参数：name=xxx&amp;password=xxx&amp;phone=xxx&amp;email=xxx
+</div><div class="hljs-line">返回：{
+</div><div class="hljs-line">   <span class="hljs-selector-tag">code</span>:<span class="hljs-number">0</span>,  <span class="hljs-comment">//=&gt;0 注册成功   1 失败</span>
+</div><div class="hljs-line">   msg:<span class="hljs-string">'xxx'</span>
+</div><div class="hljs-line">}
+</div><div class="hljs-line">获取个人信息
+</div><div class="hljs-line">地址：/personal/info
+</div><div class="hljs-line">方式：GET
+</div><div class="hljs-line">参数：--
+</div><div class="hljs-line">返回：{
+</div><div class="hljs-line">   <span class="hljs-selector-tag">code</span>:<span class="hljs-number">0</span>  <span class="hljs-comment">//=&gt;0 成功  1=&gt;失败</span>
+</div><div class="hljs-line">   mag:<span class="hljs-string">'xxx'</span>,
+</div><div class="hljs-line">   data:{
+</div><div class="hljs-line">       id,
+</div><div class="hljs-line">       name,
+</div><div class="hljs-line">       email,
+</div><div class="hljs-line">       phone
+</div><div class="hljs-line">   }
+</div><div class="hljs-line">}
+</div></code></pre>
+
+
+
+<h2 id="购买中心">[ 购买中心 ]</h2>
+
+
+
+<h3 id="加入购物车">加入购物车</h3>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs stylus"><div class="hljs-line">地址：/store/add
+</div><div class="hljs-line">方式：POST
+</div><div class="hljs-line">参数：courseID=xxx
+</div><div class="hljs-line">返回：{
+</div><div class="hljs-line">   <span class="hljs-selector-tag">code</span>:<span class="hljs-number">0</span>,
+</div><div class="hljs-line">   msg:<span class="hljs-string">'xxx'</span>
+</div><div class="hljs-line">}
+</div><div class="hljs-line">从购物车删除
+</div><div class="hljs-line">地址：/store/remove
+</div><div class="hljs-line">方式：POST
+</div><div class="hljs-line">参数：courseID=xxx
+</div><div class="hljs-line">返回：{
+</div><div class="hljs-line">   <span class="hljs-selector-tag">code</span>:<span class="hljs-number">0</span>,
+</div><div class="hljs-line">   msg:<span class="hljs-string">'xxx'</span>
+</div><div class="hljs-line">}
+</div></code></pre>
+
+
+
+<h3 id="获取购物信息">获取购物信息</h3>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs pf"><div class="hljs-line">地址：/store/info
+</div><div class="hljs-line">方式：GET
+</div><div class="hljs-line">参数：<span class="hljs-keyword">state</span>=<span class="hljs-number">0</span>/<span class="hljs-number">1</span>/<span class="hljs-number">2</span>
+</div><div class="hljs-line">返回：{
+</div><div class="hljs-line">   code:<span class="hljs-number">0</span>,
+</div><div class="hljs-line">   msg:'xxx',
+</div><div class="hljs-line">   data:[
+</div><div class="hljs-line">       {
+</div><div class="hljs-line">        <span class="hljs-string">"id"</span>: <span class="hljs-number">999</span>,
+</div><div class="hljs-line">        <span class="hljs-string">"name"</span>: <span class="hljs-string">"REACT框架开发课程[第999讲]"</span>,
+</div><div class="hljs-line">        <span class="hljs-string">"pic"</span>: <span class="hljs-string">"http://img.zhufengpeixun.cn/reactposter.png"</span>,
+</div><div class="hljs-line">        <span class="hljs-string">"date"</span>: <span class="hljs-string">"2018-01-01"</span>,
+</div><div class="hljs-line">        <span class="hljs-string">"address"</span>: <span class="hljs-string">"珠峰培训302"</span>,
+</div><div class="hljs-line">        <span class="hljs-string">"time"</span>: <span class="hljs-string">"1小时"</span>,
+</div><div class="hljs-line">        <span class="hljs-string">"dec"</span>: <span class="hljs-string">"..."</span>,
+</div><div class="hljs-line">        <span class="hljs-string">"price"</span>: <span class="hljs-number">3000</span>,
+</div><div class="hljs-line">        <span class="hljs-string">"type"</span>: <span class="hljs-string">"react"</span>
+</div><div class="hljs-line">       },
+</div><div class="hljs-line">       ...
+</div><div class="hljs-line">   ]
+</div><div class="hljs-line">}
+</div></code></pre>
+
+
+
+<h3 id="支付">支付</h3>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs stylus"><div class="hljs-line">地址：/store/pay
+</div><div class="hljs-line">方式：POST
+</div><div class="hljs-line">参数：storeID=xxx
+</div><div class="hljs-line">返回：{
+</div><div class="hljs-line">   <span class="hljs-selector-tag">code</span>:<span class="hljs-number">0</span>,
+</div><div class="hljs-line">   msg:<span class="hljs-string">'xxx'</span>
+</div><div class="hljs-line">}
+</div></code></pre>
+
+
+
+<h2 id="首页">[ 首页 ]</h2>
+
+
+
+<h3 id="轮播图">轮播图</h3>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs clean"><div class="hljs-line">地址：/product/banner
+</div><div class="hljs-line">方式：GET
+</div><div class="hljs-line">参数：--
+</div><div class="hljs-line">返回：{
+</div><div class="hljs-line">   <span class="hljs-keyword">code</span>:<span class="hljs-number">0</span>,
+</div><div class="hljs-line">   msg:<span class="hljs-string">'xxx'</span>,
+</div><div class="hljs-line">   data:[
+</div><div class="hljs-line">    {
+</div><div class="hljs-line">      <span class="hljs-string">"id"</span>: <span class="hljs-number">1</span>,
+</div><div class="hljs-line">      <span class="hljs-string">"src"</span>: <span class="hljs-string">"https://res.vmallres.com/pimages//sale/2018-07/20180703163414161.png"</span>
+</div><div class="hljs-line">    }
+</div><div class="hljs-line">    ...
+</div><div class="hljs-line">  ]
+</div><div class="hljs-line">}
+</div></code></pre>
+
+
+
+<h3 id="poster">poster</h3>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs clean"><div class="hljs-line">地址：/product/poster
+</div><div class="hljs-line">方式：GET
+</div><div class="hljs-line">参数：--
+</div><div class="hljs-line">返回：{
+</div><div class="hljs-line">   <span class="hljs-keyword">code</span>:<span class="hljs-number">0</span>,
+</div><div class="hljs-line">   msg:<span class="hljs-string">'xxx'</span>,
+</div><div class="hljs-line">   data:[
+</div><div class="hljs-line">    {
+</div><div class="hljs-line">      <span class="hljs-string">"id"</span>: <span class="hljs-number">1</span>,
+</div><div class="hljs-line">      <span class="hljs-string">"src"</span>: <span class="hljs-string">"https://res.vmallres.com/pimages//sale/2018-07/20180703163414161.png"</span>
+</div><div class="hljs-line">    }
+</div><div class="hljs-line">    ...
+</div><div class="hljs-line">  ]
+</div><div class="hljs-line">}
+</div></code></pre>
+
+
+
+<h3 id="产品详情">产品详情</h3>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs stylus"><div class="hljs-line">地址：/course/info
+</div><div class="hljs-line">方式：GET
+</div><div class="hljs-line">参数：courseID=xxx
+</div><div class="hljs-line">返回：{
+</div><div class="hljs-line">   <span class="hljs-selector-tag">code</span>:<span class="hljs-number">0</span>,
+</div><div class="hljs-line">   msg:<span class="hljs-string">'xxx'</span>,
+</div><div class="hljs-line">   data:{
+</div><div class="hljs-line">      <span class="hljs-string">"id"</span>: <span class="hljs-number">8</span>,
+</div><div class="hljs-line">      <span class="hljs-string">"src"</span>: <span class="hljs-string">"https://res0.vmallres.com/pimages//frontLocation/content/4036661/1522168446805.png"</span>,
+</div><div class="hljs-line">      <span class="hljs-string">"title"</span>: <span class="hljs-string">"HUAWEI Mate 10 Pro 6GB+128GB 全网通版（银钻灰）"</span>,
+</div><div class="hljs-line">      <span class="hljs-string">"desc"</span>: <span class="hljs-string">"限时优惠500元，再赠精美礼品，享6期免息！！！！！"</span>,
+</div><div class="hljs-line">      <span class="hljs-string">"png1"</span>: <span class="hljs-string">"https://res.vmallres.com/pimages//product/GB1603020018501//428_428_1497323467743mp.jpg"</span>,
+</div><div class="hljs-line">      <span class="hljs-string">"png2"</span>: <span class="hljs-string">"https://res.vmallres.com/pimages//product/6901443209576//428_428_1529995693602mp.png"</span>,
+</div><div class="hljs-line">      <span class="hljs-string">"cur"</span>: <span class="hljs-string">"3999 "</span>,
+</div><div class="hljs-line">      <span class="hljs-string">"previous"</span>: <span class="hljs-number">4499</span>,
+</div><div class="hljs-line">      <span class="hljs-string">"comment"</span>:[
+</div><div class="hljs-line">        <span class="hljs-string">"支持支持"</span>, <span class="hljs-string">"非常好呢"</span>
+</div><div class="hljs-line">      ]
+</div><div class="hljs-line">    }
+</div><div class="hljs-line">}
+</div></code></pre>
+
+
+
+<h3 id="产品列表">产品列表</h3>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs nimrod"><div class="hljs-line">地址：/course/list
+</div><div class="hljs-line">方式：<span class="hljs-type">GET</span>
+</div><div class="hljs-line">参数：limit=<span class="hljs-number">10</span>&amp;page=<span class="hljs-number">1</span>&amp;<span class="hljs-keyword">type</span>=all
+</div><div class="hljs-line">返回：{
+</div><div class="hljs-line">    code:<span class="hljs-number">0</span>,
+</div><div class="hljs-line">    msg:'xxx',
+</div><div class="hljs-line">    total:<span class="hljs-number">100</span>,
+</div><div class="hljs-line">    limit:<span class="hljs-number">10</span>,
+</div><div class="hljs-line">    page:<span class="hljs-number">1</span>,
+</div><div class="hljs-line">    data:[
+</div><div class="hljs-line">      <span class="hljs-meta">{...}</span>,
+</div><div class="hljs-line">      ...
+</div><div class="hljs-line">    ]
+</div><div class="hljs-line">}
+</div></code></pre>
+
+
+
+<h2 id="发现">【发现】</h2>
+
+
+
+<h3 id="poster-1">poster</h3>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs clean"><div class="hljs-line">地址：/discover/contentList
+</div><div class="hljs-line">方式：GET
+</div><div class="hljs-line">参数：--
+</div><div class="hljs-line">返回：{
+</div><div class="hljs-line">   <span class="hljs-keyword">code</span>:<span class="hljs-number">0</span>,
+</div><div class="hljs-line">   msg:<span class="hljs-string">'xxx'</span>,
+</div><div class="hljs-line">   data:[
+</div><div class="hljs-line">    {
+</div><div class="hljs-line">      <span class="hljs-string">"src"</span>: <span class="hljs-string">"https://res.vmallres.com/pimages///cop/20180703092758907/1530581278906.jpg"</span>,
+</div><div class="hljs-line">      <span class="hljs-string">"title"</span>: <span class="hljs-string">"荣耀心晴耳机里面长这样？"</span>,
+</div><div class="hljs-line">      <span class="hljs-string">"num"</span>: <span class="hljs-string">"330"</span>
+</div><div class="hljs-line">    }
+</div><div class="hljs-line">    ...
+</div><div class="hljs-line">  ]
+</div><div class="hljs-line">}
+</div></code></pre>
+
+
+
+<h2 id="口碑好货">【口碑好货】</h2>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs clean"><div class="hljs-line">地址：/discover/goods
+</div><div class="hljs-line">方式：GET
+</div><div class="hljs-line">参数：--
+</div><div class="hljs-line">返回：{
+</div><div class="hljs-line">   <span class="hljs-keyword">code</span>:<span class="hljs-number">0</span>,
+</div><div class="hljs-line">   msg:<span class="hljs-string">'xxx'</span>,
+</div><div class="hljs-line">   data:[
+</div><div class="hljs-line">    {
+</div><div class="hljs-line">      <span class="hljs-string">"src"</span>: <span class="hljs-string">"https://res.vmallres.com/pimages///cop/20180703141437650/1530598477650.jpg"</span>,
+</div><div class="hljs-line">      <span class="hljs-string">"title"</span>: <span class="hljs-string">"非常喜欢荣耀9i  "</span>,
+</div><div class="hljs-line">      <span class="hljs-string">"content"</span>: <span class="hljs-string">"新机到手非常好看，外观炫丽，玻璃后盖质感好，系统非常流畅，性能强悍，指纹解锁非常快，耗电慢，刘海屏非常好看，非常喜欢华为和荣耀，全家都在用华为和荣耀手机，这已经是第四个了。"</span>,
+</div><div class="hljs-line">      <span class="hljs-string">"num"</span>: <span class="hljs-string">"1"</span>
+</div><div class="hljs-line">    }
+</div><div class="hljs-line">    ...
+</div><div class="hljs-line">  ]
+</div><div class="hljs-line">}
+</div></code></pre>
+
+<h2 id="类别为您推荐">【类别:为您推荐】</h2>
+
+<pre class="prettyprint hljs-dark"><code class="hljs clean"><div class="hljs-line">地址：/discover/commend
+</div><div class="hljs-line">方式：GET
+</div><div class="hljs-line">参数：--
+</div><div class="hljs-line">返回：{
+</div><div class="hljs-line">   <span class="hljs-keyword">code</span>:<span class="hljs-number">0</span>,
+</div><div class="hljs-line">   msg:<span class="hljs-string">'xxx'</span>,
+</div><div class="hljs-line">   data:[
+</div><div class="hljs-line">    {
+</div><div class="hljs-line">      <span class="hljs-string">"id"</span>: <span class="hljs-number">500</span>,
+</div><div class="hljs-line">      <span class="hljs-string">"src"</span>: <span class="hljs-string">"https://res0.vmallres.com/pimages//frontLocation/content/4036661/1522168446805.png"</span>,
+</div><div class="hljs-line">      <span class="hljs-string">"title"</span>: <span class="hljs-string">"荣耀Play 全网通 4GB+64GB（极光蓝）"</span>,
+</div><div class="hljs-line">      <span class="hljs-string">"desc"</span>: <span class="hljs-string">"【现货速发】搭载“很吓人的技术”；购机享多重好礼！"</span>,
+</div><div class="hljs-line">      <span class="hljs-string">"png1"</span>: <span class="hljs-string">"https://res.vmallres.com/pimages//product/6901443242658//428_428_1527926254636mp.jpg"</span>,
+</div><div class="hljs-line">      <span class="hljs-string">"png2"</span>: <span class="hljs-string">"https://res.vmallres.com/pimages//product/6901443242658/group//428_428_1527926246708.jpg"</span>,
+</div><div class="hljs-line">      <span class="hljs-string">"cur"</span>: <span class="hljs-string">"3999 "</span>,
+</div><div class="hljs-line">      <span class="hljs-string">"previous"</span>: <span class="hljs-string">""</span>,
+</div><div class="hljs-line">      <span class="hljs-string">"comment"</span>: [
+</div><div class="hljs-line">        <span class="hljs-string">"支持支持"</span>,
+</div><div class="hljs-line">        <span class="hljs-string">"非常好呢"</span>
+</div><div class="hljs-line">      ]
+</div><div class="hljs-line">    }
+</div><div class="hljs-line">   ...
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">}
+</div><div class="hljs-line"><wbr>
+</div></code></pre>
+
+
+
+<h2 id="类别-其他类似只是请求地址改变">【类别： 其他类似，只是请求地址改变】</h2>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs awk"><div class="hljs-line">请求地址依次是：
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-regexp">/category/</span> + 
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">huawei_ph
+</div><div class="hljs-line">rongyao_ph
+</div><div class="hljs-line">rongyao_ipd
+</div><div class="hljs-line">zhineng
+</div><div class="hljs-line">jiaju
+</div><div class="hljs-line">peijian
+</div><div class="hljs-line">typeijian   
+</div><div class="hljs-line">cological
+</div><div class="hljs-line">service
+</div><div class="hljs-line"><wbr>
+</div></code></pre></div></body></html>

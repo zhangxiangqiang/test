@@ -1,0 +1,329 @@
+//.cart{
+//  @gray: #eaeaea;
+//  @red: #CA151E;
+//  margin-bottom: 2rem;
+//
+//  /*修改input选中样式*/
+//  .ant-checkbox-checked .ant-checkbox-inner, .ant-checkbox-indeterminate .ant-checkbox-inner{
+//    background-color: @red;
+//    border-color: @red;
+//  }
+//
+//  .ant-checkbox-wrapper:hover .ant-checkbox-inner, .ant-checkbox:hover .ant-checkbox-inner, .ant-checkbox-input:focus + .ant-checkbox-inner {
+//    border-color: @gray;
+//  }
+//
+//
+//
+//  header{
+//    height: 1.2rem;
+//    line-height: 1.2rem;
+//    padding: 0 .2rem;
+//    font-size: .32rem;
+//    border-bottom: 1px solid @gray;
+//    span{
+//      margin-left: .2rem;
+//    }
+//    .left{
+//      float: left;
+//    }
+//
+//    .right{
+//      float: right;
+//    }
+//  }
+//
+//  .content{
+//    margin-bottom: 0;
+//   li{
+//     position: relative;
+//     box-sizing: border-box;
+//     border-bottom: 5px solid @gray;
+//     height: 2.3rem;
+//     padding: .2rem .2rem;
+//
+//     .ant-checkbox-wrapper{
+//       position: absolute;
+//       top: 50%;
+//       left:.2rem;
+//       margin-top: -.2rem;
+//
+//     }
+//
+//     .imgBox{
+//       float: left;
+//       width: 1.4rem;
+//       height: 1.4rem;
+//       margin:0 .3rem 0 .5rem;
+//       img{
+//         width: 100%;
+//         height: 100%;
+//       }
+//     }
+//
+//     .desc{
+//       float: left;
+//       margin-left: .3rem;
+//
+//       p{
+//         width: 4.5rem;
+//         height: .8rem;
+//         line-height: .4rem;
+//         font-size: .26rem;
+//         overflow: hidden;
+//
+//       }
+//
+//       .item-num {
+//         position: absolute;
+//         bottom: .4rem;
+//         left: 2.75rem;
+//         padding: 0;
+//         font-style: normal;
+//         display: block;
+//         width: 2.2rem;
+//         border-radius: .3rem;
+//         border:1px solid @gray;
+//         background-color: @gray;
+//         i {
+//           float: left;
+//           font-style: normal;
+//           width: .6rem;
+//           height: .6rem;
+//           line-height: .6rem;
+//           text-align: center;
+//           &.cur-num {
+//             width: .9rem;
+//             border-right: 1px solid #eaeaea;
+//             border-left: 1px solid #eaeaea;
+//             background-color: #fff;
+//           }
+//         }
+//       }
+//       .edit-num{
+//         position: absolute;
+//         bottom: .4rem;
+//         left: 2.75rem;
+//         height: .6rem;
+//         line-height: .6rem;
+//         width: 4.5rem;
+//         span{
+//           text-align: center;
+//         }
+//
+//         b{
+//           float: right;
+//         }
+//       }
+//     }
+//   }
+//  }
+//
+//  .bg{
+//    height: 1rem;
+//    background-color: @gray;
+//  }
+//
+//  .pay{
+//    position: fixed;
+//    bottom: 0;
+//    right: 0;
+//    left: 0;
+//    max-width: 750px;
+//    height: .96rem;
+//    z-index: 999;
+//    margin: 0 auto 1.04rem;
+//    padding-left: .2rem;
+//
+//    line-height: .96rem;
+//
+//    .dele{
+//      float: right;
+//
+//     span{
+//       font-size: .24rem;
+//       margin-right: .2rem;
+//       b{
+//         font-size: .28rem;
+//         color:@red;
+//       }
+//     }
+//      button{
+//        width: 1.6rem;
+//        background-color: @red;
+//        opacity: .5;
+//        text-align: center;
+//        color: #fff;
+//        border: none;
+//
+//        .balance{
+//          opacity: 1;
+//        }
+//      }
+//    }
+//  }
+//
+//}
+
+.cart{
+  @gray: #eaeaea;
+  @red: #CA151E;
+  margin-bottom: 2rem;
+
+  /*修改input选中样式*/
+  .ant-checkbox-checked .ant-checkbox-inner, .ant-checkbox-indeterminate .ant-checkbox-inner{
+    background-color: @red;
+    border-color: @red;
+  }
+
+  .ant-checkbox-wrapper:hover .ant-checkbox-inner, .ant-checkbox:hover .ant-checkbox-inner, .ant-checkbox-input:focus + .ant-checkbox-inner {
+    border-color: @gray;
+  }
+
+
+
+  header{
+    height: 1.2rem;
+    line-height: 1.2rem;
+    padding: 0 .2rem;
+    font-size: .32rem;
+    border-bottom: 1px solid @gray;
+    span{
+      margin-left: .2rem;
+    }
+    .left{
+      float: left;
+    }
+
+    .right{
+      float: right;
+    }
+  }
+
+  .go{
+    p{
+      text-align: center;
+      line-height: .6rem;
+      font-size: .36rem;
+      margin:.4rem 0 .2rem 0;
+      color: #888;
+
+      i{
+        margin-right: .2rem;
+      }
+    }
+
+
+    div{
+      height: .4rem;
+      line-height: .4rem;
+      text-align: center;
+      font-size:.32rem;
+
+
+      a{
+        width: auto;
+        padding: 0 .2rem;
+        //display: block;
+        border:1px solid @red;
+        border-radius: .3rem;
+        color:@red;
+      }
+
+    }
+
+  }
+
+  .content{
+    margin-bottom: 0;
+    li{
+      position: relative;
+      box-sizing: border-box;
+      border-bottom: 5px solid @gray;
+      height: 2.3rem;
+      padding: .2rem .2rem;
+
+      .ant-checkbox-wrapper{
+        position: absolute;
+        top: 50%;
+        left:.2rem;
+        margin-top: -.2rem;
+
+      }
+
+      .imgBox{
+        float: left;
+        width: 1.4rem;
+        height: 1.4rem;
+        margin:0 .3rem 0 .5rem;
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .desc{
+        float: left;
+        margin-left: .3rem;
+
+        p{
+          width: 4.5rem;
+          height: .8rem;
+          line-height: .4rem;
+          font-size: .26rem;
+          overflow: hidden;
+
+        }
+
+        .item-num {
+          position: absolute;
+          bottom: .4rem;
+          left: 2.75rem;
+          padding: 0;
+          font-style: normal;
+          display: block;
+          width: 2.2rem;
+          border-radius: .3rem;
+          border:1px solid @gray;
+          background-color: @gray;
+          i {
+            float: left;
+            font-style: normal;
+            width: .6rem;
+            height: .6rem;
+            line-height: .6rem;
+            text-align: center;
+            &.cur-num {
+              width: .9rem;
+              border-right: 1px solid #eaeaea;
+              border-left: 1px solid #eaeaea;
+              background-color: #fff;
+            }
+          }
+        }
+        .edit-num{
+          position: absolute;
+          bottom: .4rem;
+          left: 2.75rem;
+          height: .6rem;
+          line-height: .6rem;
+          width: 4.5rem;
+          span{
+            text-align: center;
+          }
+
+          b{
+            float: right;
+          }
+        }
+      }
+    }
+
+  }
+
+  .bg{
+    height: 1rem;
+    background-color: @gray;
+  }
+
+}

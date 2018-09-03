@@ -1,0 +1,34 @@
+
+
+
+export const CATEGORY_QUERY_PROGUCT='CATEGORY_QUERY_PROGUCT';
+export const CATEGORY_QUERY_HUAWEI='CATEGORY_QUERY_HUAWEI';
+export const CATEGORY_QUERY_RONGYAO='CATEGORY_QUERY_RONGYAO';
+export const CATEGORY_QUERY_COMPUTER='CATEGORY_QUERY_COMPUTER';
+
+//轮播图
+export const PAGE_QUERY_BANNER = 'PAGE_QUERY_BANNER';
+//只有图片
+export const PAGE_QUERY_POSTER = 'PAGE_QUERY_POSTER';
+//图文
+export const PAGE_QUERY_LIST ='PAGE_QUERY_LIST';
+
+//搜索
+export const PAGE_QUERY_SEARCHINFO = 'PAGE_QUERY_SEARCHINFO';
+
+
+export const DISCOVER_QUERY_CHANNEL='DISCOVER_QUERY_CHANNEL';
+
+
+//cart
+export const GET_CART_INFO = 'GET_CART_INFO';
+
+export const GET_PAY = 'GET_PAY';
+export const GET_UNPAY = 'GET_UNPAY';
+
+// login
+
+export const GET_LOGIN = 'GET_LOGIN';
+
+
+
